@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.alcchallenge.Activities.EditMedActivity;
 import com.example.android.alcchallenge.Activities.Main2Activity;
 import com.example.android.alcchallenge.Activities.MedicationDetailActivity;
 import com.example.android.alcchallenge.Contracts.MedicationsContract;
@@ -60,14 +61,6 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
 
     private RecyclerView mRecyclerView;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
@@ -218,8 +211,8 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
 
     @Override
     public void showAddMedication() {
-        startActivityForResult(new Intent(getContext(), ),
-                AddEditMedicationActivity.REQUEST_ADD_MEDICATION);
+        startActivityForResult(new Intent(getContext(),MedicationDetailActivity.class ),
+                EditMedActivity.REQUEST_ADD_MEDICATION);
 
 
     }

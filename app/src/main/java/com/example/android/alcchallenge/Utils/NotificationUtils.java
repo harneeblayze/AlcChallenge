@@ -13,7 +13,9 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 
+import com.example.android.alcchallenge.Activities.Main2Activity;
 import com.example.android.alcchallenge.R;
+import com.example.android.alcchallenge.Source.MedManagerIntentService;
 import com.example.android.alcchallenge.Source.MedManagerTasks;
 
 public class NotificationUtils {
@@ -102,7 +104,7 @@ public class NotificationUtils {
 
     private static PendingIntent contentIntent(Context context){
 
-        Intent startActivityIntent = new Intent(context, MedicationsActivity.class);
+        Intent startActivityIntent = new Intent(context, Main2Activity.class);
 
         return PendingIntent.getActivity(
                 context,

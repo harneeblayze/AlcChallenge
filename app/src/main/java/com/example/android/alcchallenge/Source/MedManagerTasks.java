@@ -3,7 +3,7 @@ package com.example.android.alcchallenge.Source;
 import android.content.Context;
 import android.support.annotation.Nullable;
 
-import ng.codeinn.med_manager.utilities.NotificationUtils;
+import com.example.android.alcchallenge.Utils.NotificationUtils;
 
 /**
  * Created by HARNY on 04/09/2018.

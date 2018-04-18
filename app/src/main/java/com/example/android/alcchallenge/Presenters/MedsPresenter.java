@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.example.android.alcchallenge.Activities.EditMedActivity;
 import com.example.android.alcchallenge.Contracts.MedicationsContract;
 import com.example.android.alcchallenge.Source.Medication;
 import com.example.android.alcchallenge.Source.MedicationsDataSource;
@@ -11,14 +12,13 @@ import com.example.android.alcchallenge.Source.MedicationsFilterType;
 
 import java.util.List;
 
-
 import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
 
 /**
  * Created by HARNY on 4/18/2018.
  */
 
-public class MedicationsPresenter implements MedicationsContract.IPresenter {
+public class MedsPresenter implements MedicationsContract.IPresenter {
 
     private final MedicationsDataSource mMedicationsDataSource;
 
@@ -26,7 +26,7 @@ public class MedicationsPresenter implements MedicationsContract.IPresenter {
 
     private MedicationsFilterType mCurrentFiltering = MedicationsFilterType.ALL_MEDICATIONS;
 
-    public MedicationsPresenter(@NonNull MedicationsDataSource medicationsDataSource,
+    public MedsPresenter(@NonNull MedicationsDataSource medicationsDataSource,
                                 MedicationsContract.IView medicationsView){
         mMedicationsDataSource = checkNotNull(medicationsDataSource, "medicationsDataSource cannot be null");
         mMedicationsView = checkNotNull(medicationsView, "medicationsView cannot be null");
@@ -45,7 +45,7 @@ public class MedicationsPresenter implements MedicationsContract.IPresenter {
     public void result(int requestCode, int resultCode) {
         // If a medication was successfully added, show snackbar
 
-        if (AddEditMedicationActivity.REQUEST_ADD_MEDICATION == requestCode && Activity.RESULT_OK == resultCode) {
+        if (EditMedActivity.REQUEST_ADD_MEDICATION == requestCode && Activity.RESULT_OK == resultCode) {
             mMedicationsView.showSuccessfullySavedMessage();
         }
     }

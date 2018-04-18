@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import com.example.android.alcchallenge.Contracts.EditMedContract;
 import com.example.android.alcchallenge.Source.Medication;
 import com.example.android.alcchallenge.Source.MedicationsDataSource;
-
+import com.example.android.alcchallenge.Utils.MedicationManagerSyncUtils;
 
 import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
 
@@ -75,7 +75,7 @@ public class EditMedPresenter implements EditMedContract.IPresenter,
 
     @Override
     public void scheduleMedicationScheduler(Context context, String startDate, String medicationName, int interval) {
-        MedManagerSyncUtils.scheduleMedicationScheduler(context, startDate, medicationName, interval);
+        MedicationManagerSyncUtils.scheduleMedicationScheduler(context, startDate, medicationName, interval);
 
     }
 

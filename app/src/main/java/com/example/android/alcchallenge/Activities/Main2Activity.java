@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import com.example.android.alcchallenge.Database.MedicationsDatabase;
 import com.example.android.alcchallenge.Database.MedicationsLocalDataSource;
 import com.example.android.alcchallenge.Fragments.MedFragment;
-import com.example.android.alcchallenge.Presenters.MedicationsPresenter;
+import com.example.android.alcchallenge.Presenters.MedsPresenter;
 import com.example.android.alcchallenge.R;
 import com.example.android.alcchallenge.Source.MedicationsFilterType;
 import com.example.android.alcchallenge.Utils.ActivityUtils;
@@ -26,7 +26,7 @@ public class Main2Activity extends AppCompatActivity {
 
     private static final String CURRENT_FILTERING_KEY = "CURRENT_FILTERING_KEY";
 
-    private MedicationsPresenter mMedicationsPresenter;
+    private MedsPresenter mMedicationsPresenter;
 
 
     @Override
@@ -54,7 +54,7 @@ public class Main2Activity extends AppCompatActivity {
 
             MedicationsDatabase database = MedicationsDatabase.getInstance(getApplicationContext());
 
-            mMedicationsPresenter = new MedicationsPresenter(
+            mMedicationsPresenter = new MedsPresenter(
                     MedicationsLocalDataSource.getInstance(new AppExecutors(), database.medicationsDao())
                     , medicationsFragment);
 

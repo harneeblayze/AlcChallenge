@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.android.alcchallenge.Presenters.EditMedPresenter;
 import com.example.android.alcchallenge.R;
 
 public class EditMedActivity extends AppCompatActivity {
@@ -13,7 +14,7 @@ public class EditMedActivity extends AppCompatActivity {
 
     public static final String SHOULD_LOAD_DATA_FROM_REPO_KEY = "should_load_data_from_repo_key";
 
-    private AddEditMedicationPresenter mAddEditMedicationPresenter;
+    private EditMedPresenter mAddEditMedicationPresenter;
 
 
     @Override

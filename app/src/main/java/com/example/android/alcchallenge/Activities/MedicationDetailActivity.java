@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.android.alcchallenge.Database.MedicationsDatabase;
 import com.example.android.alcchallenge.Database.MedicationsLocalDataSource;
+import com.example.android.alcchallenge.Fragments.MedicationDetailFragment;
+import com.example.android.alcchallenge.Presenters.MedicationDetailPresenter;
 import com.example.android.alcchallenge.R;
 import com.example.android.alcchallenge.Utils.ActivityUtils;
 import com.example.android.alcchallenge.Utils.AppExecutors;
