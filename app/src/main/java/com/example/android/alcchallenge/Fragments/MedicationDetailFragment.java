@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.alcchallenge.Activities.EditMedActivity;
 import com.example.android.alcchallenge.Contracts.MedicationDetailContract;
 import com.example.android.alcchallenge.R;
 import com.example.android.alcchallenge.Source.Medication;
@@ -149,9 +148,9 @@ public class MedicationDetailFragment extends Fragment implements MedicationDeta
 
     @Override
     public void showEditMedication(String medicationId) {
-        Intent intent = new Intent(getContext(), EditMedActivity.class);
-        intent.putExtra(EditMedFragment.EDIT_MEDICATION_ID, medicationId);
-        startActivityForResult(intent, REQUEST_EDIT_MEDICATION);
+        //Intent intent = new Intent(getContext(), EditMedActivity.class);
+        //intent.putExtra(EditMedFragment.EDIT_MEDICATION_ID, medicationId);
+        //startActivityForResult(intent, REQUEST_EDIT_MEDICATION);
     }
 
     @Override
