@@ -91,6 +91,10 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mMedicationAdapter = new MedicationAdapter(new ArrayList<Medication>(0), this);
+        //mPresenter.setFiltering(MedicationsFilterType.ALL_MEDICATIONS);
+        mPresenter.loadMedications();
+
+
     }
 
     @Override
@@ -113,6 +117,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_med, container, false);
         mRecyclerView =  rootView.findViewById(R.id.medications_recycler_view);
+
 
         LinearLayoutManager layoutManager =
                 new LinearLayoutManager(getContext());
@@ -137,8 +142,54 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selected = parent.getItemAtPosition(position).toString();
+
+                switch (selected){
+                    case "January":
+                        mPresenter.setFiltering(MedicationsFilterType.JANUARY_MEDICATIONS);
+                        break;
+                    case "February":
+                        mPresenter.setFiltering(MedicationsFilterType.FEBRUARY_MEDICATIONS);
+                        break;
+                    case "March":
+                        mPresenter.setFiltering(MedicationsFilterType.MARCH_MEDICATIONS);
+                        break;
+                    case "April":
+                        mPresenter.setFiltering(MedicationsFilterType.APRIL_MEDICATIONS);
+                        break;
+                    case "May":
+                        mPresenter.setFiltering(MedicationsFilterType.MAY_MEDICATIONS);
+                        break;
+                    case "June":
+                        mPresenter.setFiltering(MedicationsFilterType.JUNE_MEDICATIONS);
+                        break;
+                    case "July":
+                        mPresenter.setFiltering(MedicationsFilterType.JULY_MEDICATIONS);
+                        break;
+                    case "August":
+                        mPresenter.setFiltering(MedicationsFilterType.AUGUST_MEDICATIONS);
+                        break;
+                    case "September":
+                        mPresenter.setFiltering(MedicationsFilterType.SEPTEMBER_MEDICATIONS);
+                        break;
+                    case "October":
+                        mPresenter.setFiltering(MedicationsFilterType.OCTOBER_MEDICATIONS);
+                        break;
+                    case "November":
+                        mPresenter.setFiltering(MedicationsFilterType.NOVEMBER_MEDICATIONS);
+                        break;
+                    case "December":
+                        mPresenter.setFiltering(MedicationsFilterType.DECEMBER_MEDICATIONS);
+                        break;
+                    default:
+                        mPresenter.setFiltering(MedicationsFilterType.ALL_MEDICATIONS);
+                        break;
+                }
+                mPresenter.loadMedications();
                 Toast.makeText(getActivity(), String.valueOf(parent.getItemAtPosition(position)),Toast.LENGTH_SHORT).show();
+
             }
+
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -195,6 +246,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.medications_fragment_menu ,menu);
+
     }
 
 
