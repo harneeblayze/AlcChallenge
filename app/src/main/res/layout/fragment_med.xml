@@ -1,11 +1,13 @@
-<ScrollChildSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/refresh_layout"
     tools:context="com.example.android.alcchallenge.Fragments.MedFragment">
 
-        <RelativeLayout
+
+
+    <RelativeLayout
             android:id="@+id/medications_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -16,7 +18,7 @@
                 android:id="@+id/medications_recycler_view"
                 android:layout_width="match_parent"
                 android:clipToPadding="false"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/noMedications"
@@ -50,6 +52,14 @@
                     android:text="@string/add_a_medication" />
 
             </LinearLayout>
+
+
+        <Spinner
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/spin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         </RelativeLayout>
 
-</ScrollChildSwipeRefreshLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

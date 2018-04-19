@@ -1,9 +1,7 @@
 package com.example.android.alcchallenge.Activities;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.example.android.alcchallenge.Database.MedicationsDatabase;
 import com.example.android.alcchallenge.Database.MedicationsLocalDataSource;
@@ -22,11 +20,11 @@ public class MedicationDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medication_detail);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+/*        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);
-        mActionBar.setDisplayShowHomeEnabled(true);
+        mActionBar.setDisplayShowHomeEnabled(true);*/
 
         // Get the requested task id
         String medicationId = getIntent().getStringExtra(MEDICATION_EXTRA_ID);

@@ -10,6 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.android.alcchallenge.Database.MedicationsDatabase;
 import com.example.android.alcchallenge.Database.MedicationsLocalDataSource;
@@ -21,6 +26,7 @@ import com.example.android.alcchallenge.Utils.ActivityUtils;
 import com.example.android.alcchallenge.Utils.AppExecutors;
 
 public class Main2Activity extends AppCompatActivity {
+    Spinner spinner;
 
     private DrawerLayout drawer;
 
@@ -40,6 +46,7 @@ public class Main2Activity extends AppCompatActivity {
             ActionBar ab = getSupportActionBar();
             ab.setHomeAsUpIndicator(R.drawable.ic_menu);
             ab.setDisplayHomeAsUpEnabled(true);
+
 
             MedFragment medicationsFragment = (MedFragment)
                     getSupportFragmentManager().findFragmentById(R.id.medications_container);
@@ -117,9 +124,6 @@ public class Main2Activity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.list_navigation_menu_item:
                         //Do nothing
-                        break;
-                    case R.id.sign_out:
-                        // TODO: 14/04/2018 Set Up sign out
                         break;
                     default:
                         break;

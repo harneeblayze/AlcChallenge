@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,7 +18,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +62,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
     private TextView mNoMedicationMainView;
 
     private RecyclerView mRecyclerView;
+    Spinner spinner;
 
 
     private OnFragmentInteractionListener mListener;
@@ -109,7 +112,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_med, container, false);
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.medications_recycler_view);
+        mRecyclerView =  rootView.findViewById(R.id.medications_recycler_view);
 
         LinearLayoutManager layoutManager =
                 new LinearLayoutManager(getContext());
@@ -128,6 +131,22 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
             }
         });
 
+        spinner = (Spinner)rootView.findViewById(R.id.spin);
+        ArrayAdapter<CharSequence> spinadapt =  ArrayAdapter.createFromResource(getActivity(),R.array.months,R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(spinadapt);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity(), String.valueOf(parent.getItemAtPosition(position)),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
 
         FloatingActionButton fab = getActivity().findViewById(R.id.fab_add_medication);
         fab.setImageResource(R.drawable.ic_add);
@@ -138,7 +157,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
             }
         });
 
-        final ScrollChildSwipeRefreshLayout swipeRefreshLayout = rootView.findViewById(R.id.refresh_layout);
+      /*  final ScrollChildSwipeRefreshLayout swipeRefreshLayout = rootView.findViewById(R.id.refresh_layout);
         swipeRefreshLayout.setColorSchemeColors(
                 ContextCompat.getColor(getActivity(), R.color.colorPrimary),
                 ContextCompat.getColor(getActivity(), R.color.colorAccent),
@@ -153,7 +172,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
             }
         });
 
-        setHasOptionsMenu(true);
+        setHasOptionsMenu(true);*/
 
         return rootView;
 
@@ -211,7 +230,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
 
     @Override
     public void showAddMedication() {
-        startActivityForResult(new Intent(getContext(),MedicationDetailActivity.class ),
+        startActivityForResult(new Intent(getContext(),EditMedActivity.class ),
                 EditMedActivity.REQUEST_ADD_MEDICATION);
 
 

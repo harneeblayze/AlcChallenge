@@ -31,10 +31,10 @@ public class EditMedPresenter implements EditMedContract.IPresenter,
 
 
     public EditMedPresenter(@NonNull MedicationsDataSource medicationsDataSource,
-                            @NonNull EditMedContract.IView addMedicationView,
+                            EditMedContract.IView addMedicationView,
                             String medicationId, boolean shouldLoadDataFromRepo) {
         mMedicationsDataSource = checkNotNull(medicationsDataSource);
-        mAddMedicationView = checkNotNull(addMedicationView);
+        mAddMedicationView = addMedicationView;
         mMedicationId = medicationId;
         mIsDataMissing = shouldLoadDataFromRepo;
 
