@@ -10,11 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.example.android.alcchallenge.Database.MedicationsDatabase;
 import com.example.android.alcchallenge.Database.MedicationsLocalDataSource;
@@ -108,11 +104,11 @@ public class Main2Activity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == android.R.id.home) {
+        /*if (id == android.R.id.home) {
 
             drawer.openDrawer(GravityCompat.START);
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -121,14 +117,14 @@ public class Main2Activity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+ /*               switch (item.getItemId()){
                     case R.id.list_navigation_menu_item:
                         //Do nothing
                         break;
                     default:
                         break;
                 }
-                item.setChecked(true);
+ */               item.setChecked(true);
                 drawer.closeDrawers();
                 return true;
             }

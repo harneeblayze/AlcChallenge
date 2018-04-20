@@ -34,7 +34,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
-import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
+import static android.support.v4.util.Preconditions.checkNotNull;
 
 public class EditMedActivity extends AppCompatActivity implements EditMedContract.IView{
     private ActionBar mActionBar;

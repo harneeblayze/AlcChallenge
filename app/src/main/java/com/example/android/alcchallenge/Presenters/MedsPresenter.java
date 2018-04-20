@@ -12,7 +12,7 @@ import com.example.android.alcchallenge.Source.MedicationsFilterType;
 
 import java.util.List;
 
-import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
+import static android.support.v4.util.Preconditions.checkNotNull;
 
 /**
  * Created by HARNY on 4/18/2018.

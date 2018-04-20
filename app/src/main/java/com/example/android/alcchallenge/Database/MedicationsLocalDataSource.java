@@ -11,7 +11,7 @@ import com.example.android.alcchallenge.Utils.AppExecutors;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
-import static com.google.android.gms.common.internal.Asserts.checkNotNull;
+import static android.support.v4.util.Preconditions.checkNotNull;
 
 /**
  * Created by HARNY on 4/08/2018.
@@ -157,7 +157,7 @@ public class MedicationsLocalDataSource implements MedicationsDataSource {
 
     }
 
-    @SuppressLint("StaticFieldLeak")
+    @SuppressLint({"StaticFieldLeak", "RestrictedApi"})
     @Override
     public void saveMedication(@NonNull final Medication medication) {
 //        new AsyncTask<Void, Void, Void>() {

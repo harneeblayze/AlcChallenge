@@ -1,5 +1,6 @@
 package com.example.android.alcchallenge.Presenters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
@@ -8,7 +9,7 @@ import com.example.android.alcchallenge.Source.Medication;
 import com.example.android.alcchallenge.Source.MedicationsDataSource;
 import com.example.android.alcchallenge.Utils.MedicationManagerSyncUtils;
 
-import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
+import static android.support.v4.util.Preconditions.checkNotNull;
 
 /**
  * Created by HARNY on 04/07/2018.
@@ -30,6 +31,7 @@ public class EditMedPresenter implements EditMedContract.IPresenter,
 
 
 
+    @SuppressLint("RestrictedApi")
     public EditMedPresenter(@NonNull MedicationsDataSource medicationsDataSource,
                             EditMedContract.IView addMedicationView,
                             String medicationId, boolean shouldLoadDataFromRepo) {

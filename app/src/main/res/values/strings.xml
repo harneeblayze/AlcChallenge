@@ -60,9 +60,8 @@
 
     <string name="title_activity_medications">MedicationsActivity</string>
     <string name="medication_list">Medication List</string>
-    <string name="sign_out">Sign Out</string>
-    <string name="add_a_medication">Add a Medication +</string>
-    <string name="no_medications">You have no medications</string>
+    <string name="add_a_medication">HERE</string>
+    <string name="no_medications">Please add Medication</string>
     <string name="in_progress">In Progress</string>
     <string name="completed">Completed</string>
     <string name="january">January</string>

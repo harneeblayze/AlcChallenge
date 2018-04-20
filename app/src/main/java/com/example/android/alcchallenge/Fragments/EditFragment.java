@@ -30,7 +30,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
-import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
+import static android.support.v4.util.Preconditions.checkNotNull;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -256,6 +256,7 @@ public class EditFragment extends Fragment implements EditMedContract.IView {
         }
     };
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void setPresenter(EditMedContract.IPresenter presenter) {
         mPresenter = checkNotNull(presenter);

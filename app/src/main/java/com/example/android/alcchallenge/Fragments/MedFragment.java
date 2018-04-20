@@ -304,7 +304,7 @@ public class MedFragment extends Fragment implements MedicationsContract.IView, 
     public void showNoMedications() {
         showNoMedicationsViews(
                 getString(R.string.no_medications),
-                R.drawable.ic_check_circle_24dp
+                R.drawable.ic_folder
         );
     }
 
