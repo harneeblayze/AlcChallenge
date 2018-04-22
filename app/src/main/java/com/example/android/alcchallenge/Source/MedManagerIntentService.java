@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 
 /**
- * Created by Jer on 07/04/2018.
+ * Created by HARNY on 04/09/2018.
  */
 
 public class MedManagerIntentService extends IntentService{

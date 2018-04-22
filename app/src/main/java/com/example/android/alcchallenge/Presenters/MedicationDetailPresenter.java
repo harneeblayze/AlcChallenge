@@ -10,7 +10,7 @@ import com.example.android.alcchallenge.Source.MedicationsDataSource;
 import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
 
 /**
- * Created by Jer on 15/04/2018.
+ * Created by HARNY on 04/12/2018.
  */
 
 public class MedicationDetailPresenter implements MedicationDetailContract.IPresenter{

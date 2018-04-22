@@ -10,7 +10,7 @@ import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 
 /**
- * Created by Jer on 06/04/2018.
+ * Created by HARNY on 04/07/2018.
  */
 
 public class MedManagerFirebaseJobService extends JobService {

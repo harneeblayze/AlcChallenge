@@ -9,7 +9,7 @@ import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 
 /**
- * Created by Jer on 17/04/2018.
+ * Created by HARNY on 04/10/2018.
  */
 
 public class MedicationSchedulerService extends JobService {
